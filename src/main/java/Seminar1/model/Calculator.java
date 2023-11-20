@@ -53,6 +53,12 @@ public class Calculator {
      * @return возвращает сумму покупки с учетом скидки
      */
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
-        return 0;
+        if (purchaseAmount < 0) throw new ArithmeticException("Стоимость не может быть отрицательной!");
+        if (discountAmount < 0 || discountAmount > 100) throw new ArithmeticException("Неправильные параметры скидки!");
+        double resultAmount = purchaseAmount - purchaseAmount * discountAmount * 0.01;
+        if (resultAmount < 0)
+            throw new RuntimeException("Скидка не может быть больше 100%!");
+        else
+            return resultAmount;
     }
 }

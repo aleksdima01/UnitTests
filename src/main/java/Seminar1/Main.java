@@ -19,7 +19,7 @@ public class Main {
 
         assertConditionB();
 //
- //       System.out.println(sum(2_147_483_647,-0));
+        System.out.println(sum(2_147_483_647, 0));
 //
 //        happyNY();
 //
@@ -27,7 +27,7 @@ public class Main {
 //
 //        checkingShoppingCart();
 //
-        String[] colors = {"aqua", "green","violet","orange","yellow","blue","gold"};
+        String[] colors = {"aqua", "green", "violet", "orange", "yellow", "blue", "gold"};
         testingJavaCollectionsAssertJ(colors);
 //
         List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
@@ -62,11 +62,10 @@ public class Main {
      * @return сумму переданных чисел
      * @apiNote assert boolean_выражение : сообщение_об_ошибке;
      */
-//    public static int sum(int a, int b) {
-//        //assert Integer.MAX_VALUE -a-b>0;
-//        assert Math.abs(a+b)>=Integer.MAX_VALUE;
-//        return a + b;
-//    }
+    public static int sum(int a, int b) {
+        assert Integer.MAX_VALUE - a - b > 0;
+        return a + b;
+    }
 
     /**
      * 4) Нужно найти и исправить ошибку в условиях assert
@@ -153,7 +152,7 @@ public class Main {
         assertThat(hero.getBag())
                 .isNotEmpty()
                 .hasSize(3)
-                .contains("Bow","Axe","Gold");
+                .contains("Bow", "Axe", "Gold");
         assertThat(hero.isHuman())
                 .isTrue();
 

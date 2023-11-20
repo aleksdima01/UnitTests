@@ -1,7 +1,10 @@
 package Seminar1;
+
 import Seminar1.model.Calculator;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.InstanceOfAssertFactories.DOUBLE;
 
 public class CalculatorTest {
     public static void main(String[] args) {
@@ -49,7 +52,11 @@ public class CalculatorTest {
                 Calculator.calculation(8, 4, '_')
         ).isInstanceOf(IllegalStateException.class);
 
-        System.out.println(Calculator.calculation(2_147_483_647, 1, '+')); // integer overflow
-        System.out.println(Calculator.squareRootExtraction(169));
+        //System.out.println(Calculator.calculation(2_147_483_647, 1, '+')); // integer overflow
+        //System.out.println(Calculator.squareRootExtraction(169));
+        System.out.printf("Цена со скидкой = %.2f\n", Calculator.calculatingDiscount(123123, 78));
+        // Проверка метода calculatingDiscount, с использованием утверждений AssertJ:
+        assertThat(Calculator.calculatingDiscount(123123, 24)).isGreaterThanOrEqualTo(0);
+        assertThat(Calculator.calculatingDiscount(123123, 24)).isNotNull();
     }
 }
