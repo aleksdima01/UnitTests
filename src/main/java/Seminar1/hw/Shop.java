@@ -1,9 +1,11 @@
 package Seminar1.hw;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
 public class Shop {
     private List<Product> products;
+
 
     // Геттеры, сеттеры:
     public List<Product> getProducts() {
@@ -15,18 +17,16 @@ public class Shop {
     }
 
     /**
-     * @return отсортированный по возрастанию и цене список продуктов
+     * Отсортированный по возрастанию и цене список продуктов
      */
-    public List<Product> getSortedListProducts() {
-        return null;
+    public void getSortedListProducts() {
+        Collections.sort(products);
     }
 
     /**
      * @return самый дорогой продукт
      */
     public Product getMostExpensiveProduct() {
-        return null;
+        return Collections.max(products);
     }
-
-
 }

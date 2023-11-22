@@ -4,7 +4,6 @@ import Seminar1.model.Calculator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.assertj.core.api.InstanceOfAssertFactories.DOUBLE;
 
 public class CalculatorTest {
     public static void main(String[] args) {

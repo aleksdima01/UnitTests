@@ -1,8 +1,6 @@
 package Seminar1.hw;
 
-import java.util.ArrayList;
-
-public class Product {
+public class Product implements Comparable<Product> {
     private int cost; // Стоимость продукта
     private String title; // Название
 
@@ -34,21 +32,9 @@ public class Product {
                 '}';
     }
 
-
-    public static void main(String[] args) {
-        Product milk = new Product("Молоко", 130);
-        Product cookie = new Product("Печенье", 130);
-        Product sugar = new Product("Сахар", 70);
-        Product bread = new Product("Хлеб", 45);
-        Product meat = new Product("Мясо", 870);
-        Product eggs = new Product("Яйца", 90);
-        ArrayList<Product> list1 = new ArrayList<Product>();
-        list1.add(milk);
-        list1.add(cookie);
-        list1.add(sugar);
-        list1.add(bread);
-        list1.add(meat);
-        list1.add(eggs);
-        System.out.println(list1);
+    @Override
+    public int compareTo(Product o) {
+        return this.getCost() - o.getCost();
     }
+
 }
