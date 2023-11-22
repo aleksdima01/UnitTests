@@ -63,7 +63,7 @@ public class Main {
      * @apiNote assert boolean_выражение : сообщение_об_ошибке;
      */
     public static int sum(int a, int b) {
-        assert Integer.MAX_VALUE - a - b > 0;
+        assert Integer.MAX_VALUE - (a - b) >= 0;
         return a + b;
     }
 

@@ -1,7 +1,7 @@
 package Seminar1.hw;
 
+import java.util.ArrayList;
 import java.util.List;
-
 public class Shop {
     private List<Product> products;
 
@@ -27,4 +27,6 @@ public class Shop {
     public Product getMostExpensiveProduct() {
         return null;
     }
+
+
 }
