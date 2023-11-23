@@ -1,6 +1,7 @@
 package Seminar1;
 
 import Seminar1.model.Calculator;
+import org.assertj.core.api.Assertions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -41,13 +42,13 @@ public class CalculatorTest {
         assert 2 == Calculator.calculation(100, 50, '/');
 
         // Проверка базового функционала с целыми числами, с использованием утверждений AssertJ:
-        assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
-        assertThat(Calculator.calculation(2, 2, '-')).isEqualTo(0);
-        assertThat(Calculator.calculation(2, 7, '*')).isEqualTo(14);
-        assertThat(Calculator.calculation(100, 50, '/')).isEqualTo(2);
+        Assertions.assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
+        Assertions.assertThat(Calculator.calculation(2, 2, '-')).isEqualTo(0);
+        Assertions.assertThat(Calculator.calculation(2, 7, '*')).isEqualTo(14);
+        Assertions.assertThat(Calculator.calculation(100, 50, '/')).isEqualTo(2);
 
         // Проверка ожидаемого исключения, с использованием утверждений AssertJ:
-        assertThatThrownBy(() ->
+        Assertions.assertThatThrownBy(() ->
                 Calculator.calculation(8, 4, '_')
         ).isInstanceOf(IllegalStateException.class);
 
@@ -55,7 +56,7 @@ public class CalculatorTest {
         //System.out.println(Calculator.squareRootExtraction(169));
         System.out.printf("Цена со скидкой = %.2f\n", Calculator.calculatingDiscount(123123, 78));
         // Проверка метода calculatingDiscount, с использованием утверждений AssertJ:
-        assertThat(Calculator.calculatingDiscount(123123, 24)).isGreaterThanOrEqualTo(0);
-        assertThat(Calculator.calculatingDiscount(123123, 24)).isNotNull();
+        Assertions.assertThat(Calculator.calculatingDiscount(123123, 24)).isGreaterThanOrEqualTo(0);
+        Assertions.assertThat(Calculator.calculatingDiscount(123123, 24)).isNotNull();
     }
 }

@@ -2,6 +2,7 @@ package Seminar1.lection;
 
 
 import Seminar1.model.Calculator;
+import org.assertj.core.api.Assertions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -20,7 +21,7 @@ public class LectionHomeWork {
      * необходимые проверки для него используя граничные случаи
      */
     public static void method1() {
-        assertThatThrownBy(() ->
+        Assertions.assertThatThrownBy(() ->
                 Calculator.squareRootExtraction(0)
         ).isInstanceOf(ArithmeticException.class);
     }
@@ -29,7 +30,7 @@ public class LectionHomeWork {
      * 2. Как будет выглядеть проверка для случая деления на ноль? (с использованием AssertJ)
      */
     public static void method2() {
-        assertThatThrownBy(() ->
+        Assertions.assertThatThrownBy(() ->
                 Calculator.calculation(5, 0, '/')
         ).isInstanceOf(ArithmeticException.class);
     }
@@ -43,6 +44,6 @@ public class LectionHomeWork {
             throw new AssertionError("Ошибка в методе");
         }
         assert 8 == Calculator.calculation(2, 6, '+');
-        assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
+        Assertions.assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
     }
 }

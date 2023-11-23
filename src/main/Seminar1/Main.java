@@ -1,6 +1,7 @@
 package Seminar1;
 
 import Seminar1.model.Hero;
+import org.assertj.core.api.Assertions;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -123,7 +124,7 @@ public class Main {
      * @param colors массив с цветами
      */
     public static void testingJavaCollectionsAssertJ(String[] colors) {
-        assertThat(colors)
+        Assertions.assertThat(colors)
                 .isNotEmpty()
                 .hasSize(7)
                 .doesNotHaveDuplicates()
