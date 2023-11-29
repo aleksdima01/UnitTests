@@ -7,7 +7,14 @@ public class SomeService {
      */
     public String fizzBuzz(int i) {
 
-        return null; // вместо этого напишите свою реализацию
+        if (i % 15 == 0) {
+            return "fizzbuzz";
+        } else if (i % 3 == 0) {
+            return "fizz";
+        } else if (i % 5 == 0) {
+            return "buzz";
+        }
+        return "" + i;
     }
 
     /**
@@ -15,6 +22,8 @@ public class SomeService {
      */
     public boolean firstLast6(int[] nums) {
 
+        if (nums[0] == 6 || nums[nums.length - 1] == 6)
+            return true;
         return false;
     }
 
@@ -24,7 +33,7 @@ public class SomeService {
      */
     public double calculatingDiscount(double purchaseAmount, int discountAmount) {
 
-        return purchaseAmount;
+        return purchaseAmount - (purchaseAmount * discountAmount / 100);
     }
 
 
