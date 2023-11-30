@@ -9,5 +9,8 @@ public class NotificationService {
 
     public void sendNotification(String message, String recipient) {
         messageService.sendMessage(message, recipient);
+        messageService.sendMessageTo(message, recipient);
+        messageService.sendMessage(message, recipient);
+        messageService.sendMessage(message, recipient);
     }
 }

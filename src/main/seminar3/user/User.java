@@ -1,12 +1,12 @@
-package seminar3.tdd;
+package seminar3.user;
 
 public class User {
 
     String name;
     private String password;
-    boolean isadmin;
+    boolean isAdmin;
 
-    boolean isAuthenticate = false;
+    private boolean isAuthenticate = false;
 
     public User(String name, String password) {
         this.name = name;
@@ -17,31 +17,33 @@ public class User {
         return name;
     }
 
-
-    public boolean isIsadmin() {
-        return isadmin;
+    private String getPassword() {
+        return password;
     }
 
-    public boolean isAuthenticate() {
+    public boolean isAmin() {
+        return isAdmin;
+    }
+
+    public boolean userIsAuthenticate() {
         return isAuthenticate;
     }
 
     //3.6.
-    public boolean authenticate(String name, String password) {
-        if (this.name.equals(name) && this.password.equals(password)) {
+    public void authenticate(String name, String password) {
+        if (this.name.equals(name) && this.password.equals(password))
             isAuthenticate = true;
-            return true;
-        } else
-            return false;
+        else
+            isAuthenticate = false;
+
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", isadmin=" + isadmin +
+                ", isadmin=" + isAdmin +
                 ", isAuthenticate=" + isAuthenticate +
-                '}';
+                '}' + '\n';
     }
 }

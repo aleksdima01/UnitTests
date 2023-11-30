@@ -8,6 +8,7 @@ public class PaymentForm {
     }
 
     public void pay(double amount) {
+
         creditCard.charge(amount);
     }
 }

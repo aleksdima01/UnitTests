@@ -1,4 +1,4 @@
-package seminar3.tdd;
+package seminar3.user;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class UserRepository {
     List<User> data = new ArrayList<>();
 
     public void addUser(User user) {
-        if (user.isAuthenticate)
+        if (user.userIsAuthenticate())
             data.add(user);
     }
 
@@ -24,16 +24,23 @@ public class UserRepository {
 
     public static void main(String[] args) {
         User user1 = new User("Pete", "12345");
-        System.out.println(user1.authenticate("Pete", "12345"));
+        User user2 = new User("Shon", "123456");
+        user1.authenticate("Pete", "12345");
+        user2.authenticate("Shon", "123456");
+
+
         UserRepository repo = new UserRepository();
         repo.addUser(user1);
+        repo.addUser(user2);
         System.out.println(repo);
     }
 
     @Override
     public String toString() {
-        return "UserRepository{" +
-                "data=" + data +
-                '}';
+        if (!data.isEmpty()) {
+            return "UserRepository\n" +
+                    data;
+        } else
+            return "Нет актуальных сеансов в системе!";
     }
 }

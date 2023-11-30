@@ -5,4 +5,9 @@ public class MessageService {
         // Здесь код, который отправляет сообщение получателю.
         System.out.println("Отправка сообщения \"" + message + "\" получателю " + recipient);
     }
+
+    public void sendMessageTo(String message, String recipient) {
+        // Здесь код, который отправляет сообщение получателю.
+        System.out.println("Отправка сообщения \"" + message + "\" получателю " + recipient);
+    }
 }
