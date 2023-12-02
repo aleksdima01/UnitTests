@@ -3,8 +3,8 @@ package seminar3.user;
 public class User {
 
     String name;
-    private String password;
-    boolean isAdmin;
+    private final String password;
+    boolean isAdmin = false;
 
     private boolean isAuthenticate = false;
 
@@ -13,15 +13,15 @@ public class User {
         this.password = password;
     }
 
+    public void setAdmin(boolean state) {
+        isAdmin = state;
+    }
+
     public String getName() {
         return name;
     }
 
-    private String getPassword() {
-        return password;
-    }
-
-    public boolean isAmin() {
+    public boolean isAdmin() {
         return isAdmin;
     }
 
@@ -35,7 +35,6 @@ public class User {
             isAuthenticate = true;
         else
             isAuthenticate = false;
-
     }
 
     @Override
