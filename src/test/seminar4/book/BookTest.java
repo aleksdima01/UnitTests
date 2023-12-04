@@ -7,10 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
     Book book;
+    Book book1;
 
     @BeforeEach
     void setUp() {
+
         book = new Book("1", "Утраченный символ", "Дэн Браун");
+        book1 = new Book("2");
     }
 
     @Test
@@ -20,8 +23,8 @@ class BookTest {
 
     @Test
     void setId() {
-        book.setId("2");
-        assertEquals("2", book.getId());
+        book1.setId("3");
+        assertEquals("3", book1.getId());
     }
 
     @Test
