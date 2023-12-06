@@ -1,5 +1,7 @@
 package seminar4.book;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +22,9 @@ public class InMemoryBookRepository implements BookRepository {
     }
 
     @Override
-    public List<Book> findAll() {
+    public ArrayList<Book> findAll() {
         return new ArrayList<>(books.values());
     }
+
+
 }
