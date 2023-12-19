@@ -1,15 +1,16 @@
 package homework6.view;
 
-import static homework6.controller.Сontroller.listNum;
 
 public class PrintToConsole {
 
-    public void print() {
+    public void print(int listNum) {
         if (listNum == 1)
             System.out.println("Первый список имеет большее среднее значение!");
         else if (listNum == -1)
             System.out.println("Второй список имеет большее среднее значение!");
+        else if (listNum == 0)
+            System.out.println("Средние значения списков равны!");
         else
-            System.out.println("Средние значения списков равны");
+            System.out.println("Ошибка вывода!");
     }
 }
