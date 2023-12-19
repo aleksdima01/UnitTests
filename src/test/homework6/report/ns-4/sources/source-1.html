@@ -1,0 +1,119 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PrintToConsole</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">homework6.view</a>
+</div>
+
+<h1>Coverage Summary for Class: PrintToConsole (homework6.view)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PrintToConsole</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package homework6.view;
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;public class PrintToConsole {</b>
+&nbsp;
+&nbsp;    public void print(int listNum) {
+<b class="fc">&nbsp;        if (listNum == 1)</b>
+<b class="fc">&nbsp;            System.out.println(&quot;Первый список имеет большее среднее значение!&quot;);</b>
+<b class="fc">&nbsp;        else if (listNum == -1)</b>
+<b class="fc">&nbsp;            System.out.println(&quot;Второй список имеет большее среднее значение!&quot;);</b>
+<b class="fc">&nbsp;        else if (listNum == 0)</b>
+<b class="fc">&nbsp;            System.out.println(&quot;Средние значения списков равны!&quot;);</b>
+&nbsp;        else
+<b class="fc">&nbsp;            System.out.println(&quot;Ошибка вывода!&quot;);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-12-19 20:01</div>
+</div>
+</body>
+</html>
